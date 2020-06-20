@@ -15,9 +15,9 @@ func removeElement(nums []int, val int) int {
 		}
 		i++
 	}
-	for i, v := range nums {
-		if v == val {
-			nums = nums[:i]
+	for j := i; j < len(nums); j++ {
+		if nums[j] == val {
+			nums = nums[0:j]
 			return len(nums)
 		}
 	}
