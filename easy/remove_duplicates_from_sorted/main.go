@@ -1,4 +1,6 @@
 // https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+// Runtime: 116 ms, faster than 5.35% of Go online submissions for Remove Duplicates from Sorted Array.
+// Memory Usage: 4.6 MB, less than 99.88% of Go online submissions for Remove Duplicates from Sorted Array.
 package main
 
 func removeDuplicates(nums []int) int {
@@ -16,7 +18,7 @@ func removeDuplicates(nums []int) int {
 			last = val
 		}
 	}
-	// Shift all elements to their correct position
+	// Shift all minimum elements to the end of the array
 	for i := 1; i < len(nums); i++ {
 		if nums[i] == min {
 			next := i + 1
